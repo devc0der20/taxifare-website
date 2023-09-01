@@ -5,11 +5,14 @@ from geopy.geocoders import Nominatim
 from streamlit_folium import folium_static
 import folium
 
+
+# streamlit: https://fare-taxifare.streamlit.app/
+
 st.title('Taxi Fare Calculator')
 date = st.date_input('Date')
 time = st.time_input('Time')
 
-geolocator = Nominatim(user_agent="geoapiExercises")
+geolocator = Nominatim(user_agent="geoapiExercises", timeout=10)
 
 pickup_location = st.text_input('Enter pickup location')
 pickup_point = geolocator.geocode(pickup_location)
