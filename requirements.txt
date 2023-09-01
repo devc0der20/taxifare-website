@@ -4,3 +4,4 @@ pandas
 datetime
 geopy
 streamlit_folium
+folium
